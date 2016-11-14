@@ -5,9 +5,17 @@ Módulo de login para o Passport utilizando nossa arquitetura atômica do [Be ME
 
 ## Rotas
 
-- `POST /api/users/`: cria um usuário
-    + 
-- `POST /api/users/login`
+- `GET /api/users/`: Lista usuários
+  + **necessita estar loggado**
+- `POST /api/users/`: Cria um usuário
+    + name
+    + email
+    + password
+- `POST /api/users/login`: Entra com o usuário
+    + email
+    + password
+- `GET /api/users/logout`: Sai com o usuário
+  + **necessita estar loggado**
 
 ## Como foi feito
 

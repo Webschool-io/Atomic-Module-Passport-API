@@ -6,7 +6,7 @@ const Controller = require("./organism")
 // Create
 router.post('/', Controller.create)
 // Retrieve
-router.get('/', Controller.find)
+router.get('/', isLoggedIn, Controller.find)
 // get current user
 router.get('/currentuser', isLoggedIn, (req, res) => {
   res.json(req.user)
@@ -19,7 +19,7 @@ router.get('/login', (req, res) => {
   res.json(loginJSON)
 })
 // logout
-router.get('/logout', (req, res) => {
+router.get('/logout', isLoggedIn, (req, res) => {
   req.logout()
   res.status(200).send('Ok')
 })
