@@ -3,6 +3,18 @@
 
 Módulo de login para o Passport utilizando nossa arquitetura atômica do [Be MEAN](https://github.com/Webschool-io/be-mean).
 
+## Configuração
+
+Para utilizar algum sistema de login externo, como [Facebook]() e [Github]() você deverá criar um arquivo `.env` na raíz do projeto com essas informações:
+
+```
+facebookAuth_clientID=xxxxxx_YOUR_FACEBOOK_clientID
+facebookAuth_clientSecret=xxxxxx_YOUR_FACEBOOK_clientSecret
+githubAuth_clientID=xxxxxx_YOUR_GITHUB_clientID
+githubAuth_clientSecret=xxxxxx_YOUR_GITHUB_clientSecret
+```
+
+
 ## Rotas
 
 - `GET /api/users/`: Lista usuários
